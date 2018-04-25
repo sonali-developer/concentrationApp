@@ -12,6 +12,8 @@
 		3B1ED8E31FCE3D630069D6DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1ED8E11FCE3D630069D6DF /* Main.storyboard */; };
 		3B1ED8E51FCE3D630069D6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1ED8E41FCE3D630069D6DF /* Assets.xcassets */; };
 		3B1ED8E81FCE3D630069D6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1ED8E61FCE3D630069D6DF /* LaunchScreen.storyboard */; };
+		3B8F8007208F291C00700DA7 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F8006208F291C00700DA7 /* Concentration.swift */; };
+		3B8F8009208F2A3500700DA7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F8008208F2A3500700DA7 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3B1ED8E41FCE3D630069D6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B1ED8E71FCE3D630069D6DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B1ED8E91FCE3D630069D6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B8F8006208F291C00700DA7 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		3B8F8008208F2A3500700DA7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,9 @@
 		3B1ED8DC1FCE3D630069D6DF /* ConcentrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B8F800B208F2D9D00700DA7 /* Controller */,
+				3B8F800A208F2A4000700DA7 /* Model */,
 				3B1ED8EF1FCE43570069D6DF /* Supporting Files */,
-				3B1ED8DF1FCE3D630069D6DF /* ViewController.swift */,
 				3B1ED8E11FCE3D630069D6DF /* Main.storyboard */,
 				3B1ED8E91FCE3D630069D6DF /* Info.plist */,
 			);
@@ -70,6 +75,23 @@
 				3B1ED8E61FCE3D630069D6DF /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B8F800A208F2A4000700DA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B8F8006208F291C00700DA7 /* Concentration.swift */,
+				3B8F8008208F2A3500700DA7 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B8F800B208F2D9D00700DA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B1ED8DF1FCE3D630069D6DF /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +168,8 @@
 			files = (
 				3B1ED8E01FCE3D630069D6DF /* ViewController.swift in Sources */,
 				3B1ED8DE1FCE3D630069D6DF /* AppDelegate.swift in Sources */,
+				3B8F8007208F291C00700DA7 /* Concentration.swift in Sources */,
+				3B8F8009208F2A3500700DA7 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
