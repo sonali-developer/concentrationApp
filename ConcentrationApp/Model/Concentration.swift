@@ -8,36 +8,55 @@
 
 import Foundation
 
-class Concentration {
+struct Concentration {
     
   // var cards = Array<Card>()
-    var cards = [Card]()
+    private (set) var cards = [Card]()
     
-    var indexOfOneAndOnlyFaceUpCard : Int?
+    private var indexOfOneAndOnlyFaceUpCard : Int? {
+        get {
+            return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
+            
+//            var foundIndex: Int?
+//            for index in cards.indices {
+//                if cards[index].isFaceUp {
+//                    if foundIndex == nil {
+//                        foundIndex = index
+//                    } else {
+//                        return nil
+//                    }
+//                }
+//            }
+//            return foundIndex
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+            
+        }
+    }
+    var shuffledCards = [Card]();
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
+        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // check if cards match
-                if cards[matchIndex].identifier == cards[index].identifier {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
                 cards[index].isFaceUp = true
-                indexOfOneAndOnlyFaceUpCard = nil
-            } else {
-                // either no cards or two cards are face up
-                for flipDownIndex in cards.indices {
-                    cards[flipDownIndex].isFaceUp = false
-                }
                 
-                cards[index].isFaceUp = true
+            } else {
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
     }
     
     init(numberOfPairOfCards: Int) {
+        assert(numberOfPairOfCards > 0, "Concentration.init( \(numberOfPairOfCards)): you must have at least one pair of cards")
         //Countable Range
         // for identifier in 0...numberOfPairOfCards it starts from 0 and includes numberOfPairOfCards
         
@@ -47,8 +66,29 @@ class Concentration {
        // cards.append(card)
         cards += [card, card]
         }
+        
+    }
+    func shuffleArray(array: [Card]) -> [Card] {
+        
+        var tempArray1 = array
+        var tempArray2 = [Card]()
+        let indexRange = (array.count + 1) / 2
+        for index in 0 ..< indexRange {
+            let randomNumber = arc4random_uniform(UInt32(indexRange))
+            let randomIndex = Int(randomNumber)
+            tempArray2[index] = tempArray1[randomIndex]
+            tempArray1.remove(at: randomIndex)
+        }
+        
+        return tempArray2
     }
     
-    //TODO: Shuffle the cards
-    
 }
+
+extension Collection {
+    var oneAndOnly: Element? {
+        return count == 1 ? first : nil
+    }
+}
+
+
