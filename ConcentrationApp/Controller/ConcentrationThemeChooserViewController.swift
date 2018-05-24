@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ConcentrationThemeChooserViewController: UIViewController, UISplitViewControllerDelegate
+class ConcentrationThemeChooserViewController: VCLLoggingViewController, UISplitViewControllerDelegate
 {
 
+    override var vclLoggingName: String {
+        return "ThemeChooser"
+    }
     let themes = [
         "Sports" : "⚽️🏀🏈⚾️🎾🏐🏉🎱🏓🏸🏒⛳️",
         "Animals" : "🐶🐱🐭🐹🐰🦊🐻🐨🐼🐯🦁",
@@ -25,7 +28,9 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
     
     override func awakeFromNib() {
         splitViewController?.delegate = self
+        
     }
+    
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         if let cvc = secondaryViewController as? ConcentrationViewController {
             if cvc.theme == nil {

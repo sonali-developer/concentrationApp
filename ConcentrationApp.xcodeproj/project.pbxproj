@@ -15,6 +15,7 @@
 		3B2D5E9420B39471009CBE47 /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5E9320B39471009CBE47 /* ConcentrationThemeChooserViewController.swift */; };
 		3B8F8007208F291C00700DA7 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F8006208F291C00700DA7 /* Concentration.swift */; };
 		3B8F8009208F2A3500700DA7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F8008208F2A3500700DA7 /* Card.swift */; };
+		3BA17E9020B67A3200608BBB /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA17E8F20B67A3200608BBB /* VCLLoggingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3B2D5E9320B39471009CBE47 /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 		3B8F8006208F291C00700DA7 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		3B8F8008208F2A3500700DA7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3BA17E8F20B67A3200608BBB /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				3B1ED8EF1FCE43570069D6DF /* Supporting Files */,
 				3B1ED8E11FCE3D630069D6DF /* Main.storyboard */,
 				3B1ED8E91FCE3D630069D6DF /* Info.plist */,
+				3BA17E8F20B67A3200608BBB /* VCLLoggingViewController.swift */,
 			);
 			path = ConcentrationApp;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA17E9020B67A3200608BBB /* VCLLoggingViewController.swift in Sources */,
 				3B2D5E9420B39471009CBE47 /* ConcentrationThemeChooserViewController.swift in Sources */,
 				3B1ED8E01FCE3D630069D6DF /* ConcentrationViewController.swift in Sources */,
 				3B1ED8DE1FCE3D630069D6DF /* AppDelegate.swift in Sources */,
@@ -313,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TAUJ4K4VL;
 				INFOPLIST_FILE = ConcentrationApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.developer.sonali.ConcentrationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,7 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TAUJ4K4VL;
 				INFOPLIST_FILE = ConcentrationApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.developer.sonali.ConcentrationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

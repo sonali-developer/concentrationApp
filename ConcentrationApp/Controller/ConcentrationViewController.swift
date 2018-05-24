@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ConcentrationViewController: UIViewController {
-   
+class ConcentrationViewController: VCLLoggingViewController
+{
+    
+    override var vclLoggingName: String {
+        return "Game"
+    }
+    
     @IBOutlet private var cardButtons: [UIButton]!
     @IBOutlet private weak var flipCountLbl: UILabel! {
         didSet {
